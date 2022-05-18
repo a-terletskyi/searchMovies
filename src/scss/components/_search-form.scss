@@ -1,0 +1,25 @@
+.search {
+    margin: 15px 0;
+    &-form {
+        @include d-flex(space-between, start);
+        position: relative;
+
+        &__input,
+        &__btn {
+            display: block;
+            width: 49.5%;
+            border: solid 1px $border-color;
+        }
+
+        .search-error {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            padding: 3px 11px;
+            border-radius: 4px;
+            color: #ffffff;
+            font-family: sans-serif;
+            background-color: #e43636;
+        }
+    }
+}

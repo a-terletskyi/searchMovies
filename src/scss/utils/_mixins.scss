@@ -1,0 +1,29 @@
+@mixin responsive ($breakpoint) {
+    @if $breakpoint == small {
+        @media screen and (max-width: 576px) { @content; }
+    }
+    @if $breakpoint == medium {
+        @media screen and (max-width: 768px) { @content; }
+    }
+    @if $breakpoint == large {
+        @media screen and (max-width: 992px) { @content; }
+    }
+    @if $breakpoint == xlarge {
+        @media screen and (max-width: 1240px) { @content; }
+    }
+    @if $breakpoint == xxlarge {
+        @media screen and (max-width: 1400px) { @content; }
+    }
+}
+
+@mixin d-flex($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin square($w, $h, $bg-color) {
+    width: $w;
+    height: $h;
+    background-color: $bg-color;
+}

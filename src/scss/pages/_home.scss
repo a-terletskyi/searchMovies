@@ -1,0 +1,146 @@
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@include responsive(xlarge) {
+    .wrapper {
+        width: 869px;
+    }
+    .movies {
+        grid-template-columns: repeat(3, 270px);
+        gap: 30px;
+
+        .movie {
+            &-type,
+            &-year,
+            &-btn,
+            &-title {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .more {
+        &-poster {
+            width: 35%;
+        }
+        &-info {
+            width: 65%;
+        }
+    }
+
+    .more-genre-info {
+        font-size: 13px;
+    }
+
+    .more-description,
+    .more-written,
+    .more-directed,
+    .more-starring,
+    .more-box-office,
+    .more-awards {
+        font-size: 14px;
+    }
+}
+
+@include responsive(large) {
+    .wrapper {
+        width: 692px;
+    }
+
+    .movies {
+        grid-template-columns: repeat(3, 214px);
+        gap: 25px;
+
+        .movie {
+            &-poster img {
+                height: 300px;
+            }
+
+            &-title {
+                height: 50px;
+                margin-bottom: 12px;
+
+                h3 {
+                    font-size: 18px;
+                    line-height: 17px;
+                }
+            }
+
+            &-type,
+            &-year,
+            &-btn {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .more {
+        width: 90%;
+    }
+}
+
+@include responsive(medium) {
+    .wrapper {
+        width: 559px;
+    }
+
+    .search {
+        &-form {
+            display: block;
+            &__input,
+            &__btn {
+                display: block;
+                width: 100%;
+            }
+
+            &__input {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .more {
+        &-poster {
+            display: none;
+        }
+
+        &-info {
+            width: 100%;
+        }
+    }
+
+    .movies {
+        grid-template-columns: repeat(2, 270px);
+        gap: 20px;
+
+        .movie {
+            &-poster img {
+                height: 380px;
+            }
+        }
+    }
+}
+
+@include responsive(small) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .movies {
+        grid-template-columns: repeat(1, 100%);
+        gap: 5px;
+
+        .movie {
+            &-poster img {
+                height: auto;
+                max-height: 770px;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
